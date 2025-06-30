@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { EmpleadoFormComponent } from './components/empleado-form/empleado-form.component';
-import { EmpleadoListComponent } from './components/empleado-list/empleado-list.component';
+import { EmpleadoFormComponent } from './components/empleado-form/empleado-form';
+import { EmpleadoListComponent } from './components/empleado-list/empleado-list';
 import { EmpleadoService } from './services/empleado.service';
 import { Empleado } from './models/empleado';
 
@@ -11,8 +11,8 @@ import { Empleado } from './models/empleado';
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
-export class App {
-  protected title = 'Lista_Emp';
+export class AppComponent {
+  title = 'Lista_Emp';
 
   constructor(public empleadoService: EmpleadoService) {}
 

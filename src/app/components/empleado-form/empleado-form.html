@@ -1,0 +1,38 @@
+<div class="container mt-4">
+  <h3>Registro</h3>
+  <form (ngSubmit)="submitForm()" #empleadoForm="ngForm">
+    <div class="mb-3">
+      <label class="form-label">Nombre:</label>
+      <input type="text" class="form-control" [(ngModel)]="empleado.nombre" name="nombre" required>
+    </div>
+    
+    <div class="mb-3">
+      <label class="form-label">Correo:</label>
+      <input type="email" class="form-control" [(ngModel)]="empleado.correo" name="correo" required>
+    </div>
+    
+    <div class="mb-3">
+      <label class="form-label">Teléfono:</label>
+      <input type="text" class="form-control" [(ngModel)]="empleado.telefono" name="telefono" required>
+    </div>
+    
+    <div class="mb-3">
+      <label class="form-label">Fecha de Nacimiento:</label>
+      <input type="text" class="form-control" placeholder="dd/mm/aa" [(ngModel)]="empleado.fechaNacimiento" name="fechaNacimiento" required>
+    </div>
+    
+    <div class="mb-3">
+      <label class="form-label">Sexo:</label><br>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" [(ngModel)]="empleado.sexo" name="sexo" id="masculino" value="Masculino" required>
+        <label class="form-check-label" for="masculino">Masculino</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" [(ngModel)]="empleado.sexo" name="sexo" id="femenino" value="Femenino">
+        <label class="form-check-label" for="femenino">Femenino</label>
+      </div>
+    </div>
+    
+    <button type="submit" class="btn btn-primary" [disabled]="!empleadoForm.form.valid">Agregar</button>
+  </form>
+</div>

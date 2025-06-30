@@ -1,0 +1,30 @@
+<div class="container mt-4">
+  <h2>Listado de Empleados Angular</h2>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Num</th>
+        <th>Nombre</th>
+        <th>Correo</th>
+        <th>Teléfono</th>
+        <th>Fecha Nacimiento</th>
+        <th>Sexo</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let empleado of empleados">
+        <td>{{ empleado.id }}</td>
+        <td>{{ empleado.nombre }}</td>
+        <td>{{ empleado.correo }}</td>
+        <td>{{ empleado.telefono }}</td>
+        <td>{{ empleado.fechaNacimiento }}</td>
+        <td>{{ empleado.sexo }}</td>
+        <td>
+          <button class="btn btn-danger btn-sm" (click)="deleteEmpleado(empleado.id!)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
